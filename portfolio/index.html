@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyken C. Composo — Graphic Designer, System Developer, Digital Marketer &amp; Computer Technician</title>
+  <meta name="description" content="Cyken C. Composo — Graphic Designer, System Developer, Digital Marketing Specialist, Computer Technician and IT Professional based in the Philippines. Available for freelance and full-time opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="loader-spinner">
+      <div class="loader-ring-outer"></div>
+      <div class="loader-ring-inner"></div>
+    </div>
+    <p class="loader-text">Loading experience</p>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <button class="nav-logo" onclick="navScrollTo('home')">Cyken<span class="accent">.</span></button>
+      <div class="nav-links">
+        <button onclick="navScrollTo('home')">Home</button>
+        <button onclick="navScrollTo('about')">About</button>
+        <button onclick="navScrollTo('services')">Services</button>
+        <button onclick="navScrollTo('portfolio')">Portfolio</button>
+        <button onclick="navScrollTo('skills')">Skills</button>
+        <button onclick="navScrollTo('pricing')">Pricing</button>
+        <button onclick="navScrollTo('blog')">Blog</button>
+        <button onclick="navScrollTo('contact')">Contact</button>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="bi bi-sun icon-sun"></i>
+          <i class="bi bi-moon icon-moon"></i>
+        </button>
+      </div>
+      <div class="nav-mobile-actions">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="bi bi-sun icon-sun"></i>
+          <i class="bi bi-moon icon-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <i class="bi bi-list" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <button onclick="navScrollTo('home')">Home</button>
+    <button onclick="navScrollTo('about')">About</button>
+    <button onclick="navScrollTo('services')">Services</button>
+    <button onclick="navScrollTo('portfolio')">Portfolio</button>
+    <button onclick="navScrollTo('skills')">Skills</button>
+    <button onclick="navScrollTo('pricing')">Pricing</button>
+    <button onclick="navScrollTo('blog')">Blog</button>
+    <button onclick="navScrollTo('contact')">Contact</button>
+  </div>
+
+  <main>
+
+    <section id="home" class="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Open to Freelance &amp; Employment Opportunities
+        </div>
+        <p class="hero-name">Cyken C. Composo</p>
+        <h1 class="hero-heading"><span id="animated-role">Graphic Designer</span></h1>
+        <div class="hero-pills">
+          <span class="role-pill"><span class="dot dot-emerald"></span>Graphic Designer</span>
+          <span class="role-pill"><span class="dot dot-sky"></span>System Developer</span>
+          <span class="role-pill"><span class="dot dot-amber"></span>Digital Marketer</span>
+          <span class="role-pill"><span class="dot dot-rose"></span>Computer Technician</span>
+          <span class="role-pill"><span class="dot dot-emerald"></span>IT Professional</span>
+        </div>
+        <p class="hero-desc">
+          I design brands that stand out, develop reliable systems, execute data-driven marketing,
+          and keep your hardware running — one solution for every digital challenge.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" onclick="navScrollTo('contact')">
+            <i class="bi bi-send"></i> Hire Me
+          </button>
+          <button class="btn btn-outline" onclick="navScrollTo('portfolio')">
+            <i class="bi bi-eye"></i> View Portfolio
+          </button>
+        </div>
+      </div>
+      <button class="scroll-cue" onclick="navScrollTo('about')" aria-label="Scroll down">
+        <span>Scroll</span>
+        <i class="bi bi-arrow-down"></i>
+      </button>
+    </section>
+
+    <section id="about" class="section bg-base">
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <div class="photo-wrap">
+              <img src="./upload/ken.jpg" alt="Cyken C. Composo" class="about-photo" />
+              <div class="photo-overlay"></div>
+              <div class="photo-label">
+                <p class="photo-name">Cyken C. Composo</p>
+                <p class="photo-loc"><i class="bi bi-geo-alt"></i>Siargao Island, Surigao del Norte, Philippines</p>
+              </div>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card"><span class="stat-num">5+</span><span class="stat-lbl">Years Experience</span></div>
+              <div class="stat-card"><span class="stat-num">3</span><span class="stat-lbl">Languages Spoken</span></div>
+              <div class="stat-card"><span class="stat-num">2</span><span class="stat-lbl">Degrees Pursued</span></div>
+              <div class="stat-card"><span class="stat-num">4</span><span class="stat-lbl">Core Disciplines</span></div>
+            </div>
+          </div>
+          <div class="reveal">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">Designer, Developer, Marketer &amp; Tech Expert, All in One</h2>
+            <p class="body-text">I'm Cyken C. Composo, a multi-disciplinary professional combining graphic design, system development, digital marketing, computer technician skills, and IT expertise. My goal is to help businesses look great, run efficiently, and grow consistently.</p>
+            <p class="body-text">From crafting brand identities and developing custom software to managing digital marketing campaigns and repairing computer hardware, I bring a broad and practical skill set to every project.</p>
+            <p class="body-text mb-section">With hands-on experience in public sector administration and private sales, I combine analytical thinking, visual communication, and technical problem-solving in ways that most specialists simply can't.</p>
+            <h3 class="sub-heading"><i class="bi bi-mortarboard accent"></i> Education</h3>
+            <div class="edu-list">
+              <div class="edu-card">
+                <p class="edu-degree">Bachelor of Science in Business Administration</p>
+                <p class="edu-major">Major in Marketing Management</p>
+                <p class="edu-school">Philippine Electronic Communication Institute of Technology (PECIT)</p>
+                <p class="edu-loc"><i class="bi bi-geo-alt"></i> Butuan City</p>
+              </div>
+              <div class="edu-card">
+                <p class="edu-degree">Information Technology</p>
+                <p class="edu-major">Major in Graphic Design</p>
+                <p class="edu-school">Siargao Island Institute of Technology (SIIT)</p>
+                <p class="edu-loc"><i class="bi bi-geo-alt"></i> Dapa, Surigao Del Norte</p>
+              </div>
+            </div>
+            <h3 class="sub-heading mt-section"><i class="bi bi-globe accent"></i> Languages</h3>
+            <div class="lang-tags">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Tagalog</span>
+              <span class="lang-tag">Bisaya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Services</span>
+          <h2 class="section-title">What I Do Best</h2>
+          <p class="section-desc">Creative design, system development, results-driven marketing, and hands-on IT support all under one roof.</p>
+        </div>
+
+        <div class="svc-group reveal">
+          <div class="svc-group-title">
+            <div class="svc-group-icon emerald-icon-bg"><i class="bi bi-palette"></i></div>
+            <h3>Graphic Design</h3>
+          </div>
+          <div class="svc-grid">
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-pen"></i></div><h4>Logo Design</h4><p>Memorable brand marks that command attention</p></div>
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-layers"></i></div><h4>Brand Identity</h4><p>Complete visual identity systems</p></div>
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-image"></i></div><h4>Social Media Graphics</h4><p>Scroll-stopping content for every platform</p></div>
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-layout-sidebar"></i></div><h4>UI/UX Design</h4><p>Intuitive and beautiful interface design</p></div>
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-printer"></i></div><h4>Print Materials</h4><p>Flyers, brochures, and marketing collateral</p></div>
+            <div class="svc-card svc-emerald"><div class="svc-icon emerald-icon-bg"><i class="bi bi-palette2"></i></div><h4>Digital Illustrations</h4><p>Custom illustrations and artwork</p></div>
+          </div>
+        </div>
+
+        <div class="svc-group reveal">
+          <div class="svc-group-title">
+            <div class="svc-group-icon sky-icon-bg"><i class="bi bi-code-slash"></i></div>
+            <h3>System Development</h3>
+          </div>
+          <div class="svc-grid">
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-globe"></i></div><h4>Web Systems</h4><p>Custom web based information systems</p></div>
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-monitor"></i></div><h4>Desktop Applications</h4><p>Windows based business applications</p></div>
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-database"></i></div><h4>Database Design</h4><p>Structured and optimized database schemas</p></div>
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-diagram-3"></i></div><h4>System Integration</h4><p>Connecting software tools and workflows</p></div>
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-file-code"></i></div><h4>Custom Software</h4><p>Tailored solutions for business needs</p></div>
+            <div class="svc-card svc-sky"><div class="svc-icon sky-icon-bg"><i class="bi bi-cpu"></i></div><h4>IT Consulting</h4><p>Tech advisory for small businesses</p></div>
+          </div>
+        </div>
+
+        <div class="svc-group reveal">
+          <div class="svc-group-title">
+            <div class="svc-group-icon amber-icon-bg"><i class="bi bi-bar-chart"></i></div>
+            <h3>Digital Marketing</h3>
+          </div>
+          <div class="svc-grid">
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-share"></i></div><h4>Social Media Marketing</h4><p>Engaging strategies across all platforms</p></div>
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-search"></i></div><h4>SEO Optimization</h4><p>Organic traffic and search visibility</p></div>
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-pen"></i></div><h4>Content Strategy</h4><p>Compelling content that converts</p></div>
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-envelope"></i></div><h4>Email Campaigns</h4><p>Targeted email marketing sequences</p></div>
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-bullseye"></i></div><h4>PPC Advertising</h4><p>High-ROI paid ad campaigns</p></div>
+            <div class="svc-card svc-amber"><div class="svc-icon amber-icon-bg"><i class="bi bi-graph-up-arrow"></i></div><h4>Marketing Analytics</h4><p>Data-driven performance insights</p></div>
+          </div>
+        </div>
+
+        <div class="svc-group reveal">
+          <div class="svc-group-title">
+            <div class="svc-group-icon blue-icon-bg"><i class="bi bi-tools"></i></div>
+            <h3>Computer Technician &amp; IT</h3>
+          </div>
+          <div class="svc-grid">
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-tools"></i></div><h4>PC Repair &amp; Assembly</h4><p>Hardware diagnosis and system builds</p></div>
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-display"></i></div><h4>OS Installation</h4><p>Windows, Linux setup and configuration</p></div>
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-wifi"></i></div><h4>Network Setup</h4><p>LAN/WAN configuration and deployment</p></div>
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-hdd"></i></div><h4>Data Recovery</h4><p>Recovering lost or damaged files</p></div>
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-shield-check"></i></div><h4>Network Security</h4><p>Securing systems and infrastructure</p></div>
+            <div class="svc-card svc-blue"><div class="svc-icon blue-icon-bg"><i class="bi bi-gear"></i></div><h4>IT Support &amp; Maintenance</h4><p>Ongoing technical assistance</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section bg-base">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-desc">Projects spanning graphic design, system development, digital marketing, and computer tech.</p>
+        </div>
+        <div class="portfolio-filters reveal">
+          <button class="filter-btn active" data-filter="all">All Work</button>
+          <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+          <button class="filter-btn" data-filter="system">System Development</button>
+          <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+          <button class="filter-btn" data-filter="it">Computer Technician</button>
+        </div>
+        <div class="portfolio-grid" id="portfolio-grid">
+          <div class="pcard" data-category="graphic" data-title="Local Business Brand Identity" data-sub="Branding &amp; Logo" data-img="./upload/design.png" data-desc="Complete brand identity package for a local business including logo design, color palette, typography, and branded materials across print and digital.">
+            <div class="pcard-wrap"><img src="./upload/design.png" alt="Local Business Brand Identity" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Branding &amp; Logo &amp; Print Design</p><h4>Local Business Brand Identity</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="system" data-title="Inventory Management System" data-sub="System Development" data-img="./upload/inventory.png" data-desc="Designed and developed a desktop-based inventory management system for a small retail business — featuring product tracking, stock alerts, and sales reporting.">
+            <div class="pcard-wrap"><img src="./upload/inventory.png" alt="Inventory Management System" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">System Development</p><h4>Inventory Management System</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="marketing" data-title="Social Media Content Campaign" data-sub="Social Media Marketing" data-img="./upload/4 cards.png" data-desc="Designed and executed a social media content campaign for a retail brand, producing 30+ posts with consistent branding and significantly increased engagement.">
+            <div class="pcard-wrap"><img src="./upload/4 cards.png" alt="Social Media Content Campaign" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Social Media Marketing</p><h4>Social Media Content Campaign</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="it" data-title="PC Repair &amp; Office Network Setup" data-sub="Computer Technician" data-img="./upload/trouble.jpg" data-desc="Diagnosed and repaired 10+ desktop units, installed operating systems, configured a small office LAN network, and set up shared printing and file access.">
+            <div class="pcard-wrap"><img src="./upload/trouble.jpg" alt="PC Repair" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Computer Technician</p><h4>PC Repair &amp; Office Network Setup</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="graphic" data-title="Restaurant Menu &amp; Collateral" data-sub="Print Design" data-img="./upload/recipe.png" data-desc="Full restaurant branding suite: menu layout, signage, flyers, and social media templates with a cohesive, premium visual identity.">
+            <div class="pcard-wrap"><img src="./upload/recipe.png" alt="Restaurant Menu" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Print Design</p><h4>Restaurant Menu &amp; Collateral</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="system" data-title="Student Information System" data-sub="Web System" data-img="./upload/skc.png" data-desc="Built a web-based student information system with enrollment management, grade encoding, and report generation using HTML, CSS, JavaScript, and MySQL.">
+            <div class="pcard-wrap"><img src="./upload/skc.png" alt="Student Information System" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Web System</p><h4>Student Information System</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="marketing" data-title="Facebook Ads Campaign" data-sub="Paid Advertising" data-img="./upload/testimonial.png" data-desc="Planned and managed a Facebook Ads campaign for a local e-commerce page, achieving measurable increases in reach, page visits, and product inquiries.">
+            <div class="pcard-wrap"><img src="./upload/testimonial.png" alt="Facebook Ads Campaign" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Paid Advertising</p><h4>Facebook Ads Campaign</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="it" data-title="Hardware Upgrade &amp; Data Recovery" data-sub="PC Repair &amp; IT Support" data-img="./upload/troubleshoot.jpg" data-desc="Performed RAM and SSD upgrades on client laptops, recovered data from failing drives, and resolved OS boot failures for multiple client machines.">
+            <div class="pcard-wrap"><img src="./upload/troubleshoot.jpg" alt="Hardware Upgrade" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">PC Repair &amp; IT Support</p><h4>Hardware Upgrade &amp; Data Recovery</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="graphic" data-title="Event Poster &amp; Flyer Series" data-sub="Marketing Materials" data-img="./upload/marketing.png" data-desc="Designed a series of event posters and digital flyers for a community event, maintaining strong visual hierarchy, brand consistency, and print-ready specs.">
+            <div class="pcard-wrap"><img src="./upload/marketing.png" alt="Event Poster" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Marketing Materials</p><h4>Event Poster &amp; Flyer Series</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="system" data-title="Sales Tracking System" data-sub="Desktop Application" data-img="./upload/tracking.png" data-desc="Developed a custom sales tracking and reporting application for a small business — featuring daily sales logs, product summaries, and exportable reports.">
+            <div class="pcard-wrap"><img src="./upload/tracking.png" alt="Sales Tracking System" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">Desktop Application</p><h4>Sales Tracking System</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="marketing" data-title="SEO &amp; Content Strategy" data-sub="SEO &amp; Content" data-img="./upload/marketing.png" data-desc="Developed a content calendar and on-page SEO strategy for a local service business, improving search visibility and driving consistent organic traffic growth.">
+            <div class="pcard-wrap"><img src="./upload/marketing.png" alt="SEO Strategy" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">SEO &amp; Content</p><h4>SEO &amp; Content Strategy</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="it" data-title="Network Security &amp; Maintenance" data-sub="IT Support &amp; Networking" data-img="./upload/network.jpg" data-desc="Configured firewall rules, set up antivirus policies, updated firmware on network devices, and performed routine maintenance on a small business network.">
+            <div class="pcard-wrap"><img src="./upload/network.jpg" alt="Network Security" loading="lazy" /><div class="pcard-hover"><div><p class="pcard-sub">IT Support &amp; Networking</p><h4>Network Security &amp; Maintenance</h4></div><i class="bi bi-box-arrow-up-right"></i></div></div>
+          </div>
+          <div class="pcard" data-category="it" data-title="PC Case Assembly" data-sub="Computer Technician &middot; Video" data-video="./upload/setup.mp4" data-desc="Hands-on build walkthrough: mounting the motherboard tray, routing cables, and assembling a PC case from the ground up.">
+            <div class="pcard-wrap">
+              <img src="./upload/setup_thumb.jpg" alt="PC Case Assembly video" loading="lazy" />
+              <span class="pcard-video-tag"><i class="bi bi-play-fill"></i> Video</span>
+              <span class="pcard-play-badge"><i class="bi bi-play-fill"></i></span>
+              <div class="pcard-hover"><div><p class="pcard-sub">Computer Technician</p><h4>PC Case Assembly</h4></div><i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+          </div>
+          <div class="pcard" data-category="it" data-title="Custom Build &amp; BIOS Configuration" data-sub="Computer Technician &middot; Video" data-video="./upload/view.mp4" data-desc="Completed custom PC build with RGB cooling — powered on, tested, and configured through the BIOS.">
+            <div class="pcard-wrap">
+              <img src="./upload/view_thumb.jpg" alt="Custom PC build and BIOS setup video" loading="lazy" />
+              <span class="pcard-video-tag"><i class="bi bi-play-fill"></i> Video</span>
+              <span class="pcard-play-badge"><i class="bi bi-play-fill"></i></span>
+              <div class="pcard-hover"><div><p class="pcard-sub">Computer Technician</p><h4>Custom Build &amp; BIOS Configuration</h4></div><i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+          </div>
+          <div class="pcard" data-category="it" data-title="Hardware Enclosure Assembly" data-sub="Computer Technician &middot; Video" data-video="./upload/assemble.mp4" data-desc="Assembling and wiring a custom hardware enclosure — panel fitting, internal component mounting, and finishing touches.">
+            <div class="pcard-wrap">
+              <img src="./upload/assemble_thumb.jpg" alt="Hardware enclosure assembly video" loading="lazy" />
+              <span class="pcard-video-tag"><i class="bi bi-play-fill"></i> Video</span>
+              <span class="pcard-play-badge"><i class="bi bi-play-fill"></i></span>
+              <div class="pcard-hover"><div><p class="pcard-sub">Computer Technician</p><h4>Hardware Enclosure Assembly</h4></div><i class="bi bi-box-arrow-up-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section bg-base">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">Technical Proficiency</h2>
+          <p class="section-desc">A versatile, multi-disciplinary skill set spanning design, development, marketing, and IT — ready to deliver from day one.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-badge emerald-badge">5 Skills</div>
+            <h3>Graphic Design</h3>
+            <div class="skill-bars" data-color="emerald">
+              <div class="skill-item"><div class="ski-head"><span>Canva</span><span class="ski-pct accent"></span></div><div class="ski-track"><div class="ski-fill" data-w="95"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Adobe Photoshop</span><span class="ski-pct accent"></span></div><div class="ski-track"><div class="ski-fill" data-w="82"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Adobe Illustrator</span><span class="ski-pct accent"></span></div><div class="ski-track"><div class="ski-fill" data-w="78"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Logo &amp; Brand Design</span><span class="ski-pct accent"></span></div><div class="ski-track"><div class="ski-fill" data-w="85"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Social Media Graphics</span><span class="ski-pct accent"></span></div><div class="ski-track"><div class="ski-fill" data-w="92"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-badge sky-badge">5 Skills</div>
+            <h3>System Development</h3>
+            <div class="skill-bars" data-color="sky">
+              <div class="skill-item"><div class="ski-head"><span>HTML &amp; CSS</span><span class="ski-pct sky-text"></span></div><div class="ski-track"><div class="ski-fill sky-fill" data-w="85"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>JavaScript Basics</span><span class="ski-pct sky-text"></span></div><div class="ski-track"><div class="ski-fill sky-fill" data-w="72"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Database Management (MySQL)</span><span class="ski-pct sky-text"></span></div><div class="ski-track"><div class="ski-fill sky-fill" data-w="75"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>System Analysis &amp; Design</span><span class="ski-pct sky-text"></span></div><div class="ski-track"><div class="ski-fill sky-fill" data-w="80"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>MS Office / Google Suite</span><span class="ski-pct sky-text"></span></div><div class="ski-track"><div class="ski-fill sky-fill" data-w="92"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-badge amber-badge">5 Skills</div>
+            <h3>Digital Marketing</h3>
+            <div class="skill-bars" data-color="amber">
+              <div class="skill-item"><div class="ski-head"><span>Social Media Marketing</span><span class="ski-pct amber-text"></span></div><div class="ski-track"><div class="ski-fill amber-fill" data-w="88"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Content Strategy</span><span class="ski-pct amber-text"></span></div><div class="ski-track"><div class="ski-fill amber-fill" data-w="85"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>SEO Fundamentals</span><span class="ski-pct amber-text"></span></div><div class="ski-track"><div class="ski-fill amber-fill" data-w="78"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Facebook Ads</span><span class="ski-pct amber-text"></span></div><div class="ski-track"><div class="ski-fill amber-fill" data-w="80"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Email Marketing</span><span class="ski-pct amber-text"></span></div><div class="ski-track"><div class="ski-fill amber-fill" data-w="75"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-badge blue-badge">5 Skills</div>
+            <h3>Computer Technician &amp; IT</h3>
+            <div class="skill-bars" data-color="blue">
+              <div class="skill-item"><div class="ski-head"><span>PC Repair &amp; Assembly</span><span class="ski-pct blue-text"></span></div><div class="ski-track"><div class="ski-fill blue-fill" data-w="88"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>OS Installation &amp; Config</span><span class="ski-pct blue-text"></span></div><div class="ski-track"><div class="ski-fill blue-fill" data-w="90"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Network Configuration</span><span class="ski-pct blue-text"></span></div><div class="ski-track"><div class="ski-fill blue-fill" data-w="82"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>IT Troubleshooting</span><span class="ski-pct blue-text"></span></div><div class="ski-track"><div class="ski-fill blue-fill" data-w="87"></div></div></div>
+              <div class="skill-item"><div class="ski-head"><span>Data Recovery</span><span class="ski-pct blue-text"></span></div><div class="ski-track"><div class="ski-fill blue-fill" data-w="75"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="soft-skills reveal">
+          <span>Critical Thinking</span><span>Communication</span><span>Team Collaboration</span>
+          <span>Problem Solving</span><span>Adaptability</span><span>Time Management</span><span>Attention to Detail</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section bg-base">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Pricing</span>
+          <h2 class="section-title">Simple, Honest Pricing</h2>
+          <p class="section-desc">Transparent rates designed for Filipino businesses and international clients alike. Every peso delivers real value.</p>
+        </div>
+        <p class="pricing-note reveal">All prices are negotiable based on project scope. Contact me for a free consultation.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-blob cta-blob-1"></div>
+      <div class="cta-blob cta-blob-2"></div>
+      <div class="container text-center reveal">
+        <h2 class="cta-title">Ready to Elevate Your Brand?</h2>
+        <p class="cta-body">Whether you need a standout logo, a powerful marketing campaign, reliable IT support, or a custom system I'm here to make it happen. Let's build something great together.</p>
+        <div class="cta-btns">
+          <button class="btn cta-btn-white" onclick="navScrollTo('contact')">Hire Me Now <i class="bi bi-arrow-right"></i></button>
+          <button class="btn cta-btn-ghost" onclick="navScrollTo('portfolio')">See My Work</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-base">
+      <div class="container">
+        <div class="newsletter reveal">
+          <i class="bi bi-envelope accent newsletter-ico"></i>
+          <h3>Stay Updated</h3>
+          <p>Get weekly insights on design, development, and marketing delivered to your inbox.</p>
+          <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" required placeholder="your@email.com" />
+            <button type="submit">Subscribe <i class="bi bi-arrow-right"></i></button>
+          </form>
+          <p class="newsletter-success" id="nl-success">Thanks for subscribing!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-desc">Ready to elevate your brand or grow your business? I'd love to hear about your project.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Get in Touch</h3>
+            <div class="contact-links">
+              <a href="mailto:Composo.cyken@gmail.com" class="contact-link"><div class="cl-ico"><i class="bi bi-envelope accent"></i></div><div><p class="cl-lbl">Email</p><p>Composo.cyken@gmail.com</p></div></a>
+              <a href="tel:+639276712960" class="contact-link"><div class="cl-ico"><i class="bi bi-telephone accent"></i></div><div><p class="cl-lbl">Phone</p><p>0927 671 296</p></div></a>
+              <div class="contact-link"><div class="cl-ico"><i class="bi bi-geo-alt accent"></i></div><div><p class="cl-lbl">Location</p><p>Siargao, Philippines</p></div></div>
+              <a href="#" class="contact-link"><div class="cl-ico"><i class="bi bi-linkedin accent"></i></div><div><p class="cl-lbl">LinkedIn</p><p>Connect with me</p></div></a>
+            </div>
+            <div class="avail-box">
+              <span class="avail-dot"></span>
+              <div>
+                <p class="avail-title">Currently Available</p>
+                <p class="avail-desc">Open to freelance projects and full-time employment in design, marketing, development, and IT.</p>
+              </div>
+            </div>
+            <div class="refs-box">
+              <div class="refs-head"><i class="bi bi-globe accent"></i><h4>References Available</h4></div>
+              <p class="ref-name">Romer Maitim</p><p class="ref-role">CEO, RMM Inc. — San Jose Del Monte Bulacan</p>
+              <hr class="ref-hr" />
+              <p class="ref-name">Randy S. Petallo, MPA</p><p class="ref-role">MGDH-1 (HRMO) — LGU Del Carmen, SDN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <div class="lb-backdrop" onclick="closeLightbox()"></div>
+    <div class="lb-modal">
+      <img id="lb-img" src="" alt="" />
+      <video id="lb-video" controls playsinline></video>
+      <div class="lb-body">
+        <p class="lb-sub" id="lb-sub"></p>
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc"></p>
+      </div>
+      <button class="lb-close" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h2 class="footer-logo">Cyken<span class="accent">.</span></h2>
+          <p>Graphic Designer, System Developer, Digital Marketer, Computer Technician &amp; IT Professional based in the Philippines — one person, five disciplines.</p>
+          <div class="footer-contacts">
+            <a href="mailto:Composo.cyken@gmail.com"><i class="bi bi-envelope"></i> Composo.cyken@gmail.com</a>
+            <a href="tel:+639276712960"><i class="bi bi-telephone"></i> 0927 671 296</a>
+            <span><i class="bi bi-geo-alt"></i> Del Carmen, Surigao del Norte, Philippines</span>
+          </div>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:Composo.cyken@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><button onclick="navScrollTo('services')">Graphic Design</button></li>
+            <li><button onclick="navScrollTo('services')">Brand Identity</button></li>
+            <li><button onclick="navScrollTo('services')">System Development</button></li>
+            <li><button onclick="navScrollTo('services')">Digital Marketing</button></li>
+            <li><button onclick="navScrollTo('services')">IT Support</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><button onclick="navScrollTo('home')">Home</button></li>
+            <li><button onclick="navScrollTo('about')">About</button></li>
+            <li><button onclick="navScrollTo('portfolio')">Portfolio</button></li>
+            <li><button onclick="navScrollTo('skills')">Skills</button></li>
+            <li><button onclick="navScrollTo('pricing')">Pricing</button></li>
+            <li><button onclick="navScrollTo('contact')">Contact</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cyken C. Composo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
